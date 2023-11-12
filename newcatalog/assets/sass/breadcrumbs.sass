@@ -1,0 +1,32 @@
+.app-breadcrumbs
+  width: 100%
+  min-height: 30px
+  &__list
+    display: flex
+    color: var(--app-color-primary)
+    overflow-x: auto
+    white-space: nowrap
+    padding-bottom: 10px
+    scrollbar-width: 8px
+    scrollbar-color: var(--app-color-primary) var(--app-color-primary-inverted)
+    &::-webkit-scrollbar
+      height: 8px
+      background-color: var(--app-color-primary-inverted)
+    &::-webkit-scrollbar-thumb
+      background: var(--app-color-primary)
+  &__item
+    font-weight: 700
+    &::after
+      content: "/"
+      margin: 0 5px
+      font-weight: 400
+      font-size: 10px
+    &:last-child
+      font-weight: 400
+      border-bottom: 0
+      .app-breadcrumbs__link
+        border-bottom: 0
+      &::after
+        content: ""
+  &__link
+    border-bottom: 1px solid var(--app-color-primary)

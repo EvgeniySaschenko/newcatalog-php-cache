@@ -1,0 +1,21 @@
+.app-pagination
+  margin: 15px auto
+  &__list
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    font-weight: bold
+    overflow-y: auto
+  &__item
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    height: 30px
+    min-width: 30px
+    margin: 5px
+    padding: 5px
+    border: 2px solid var(--app-color-primary)
+    cursor: pointer
+    &.active
+      background-color: var(--app-color-primary)
+      color: var(--app-color-primary-inverted)

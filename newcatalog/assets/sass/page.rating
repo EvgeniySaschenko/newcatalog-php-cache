@@ -1,0 +1,67 @@
+.page
+  position: relative
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+  &__descr
+    margin: 20px 0
+
+  .button-sources
+    color: var(--app-color-primary)
+    text-transform: uppercase
+    font-weight: 700
+    cursor: pointer
+    display: inline-block
+    margin-right: 20px
+    &-text-1
+      @media (max-width: $app-screen-lg)
+        display: none
+    &-text-2
+      display: none
+      @media (max-width: $app-screen-lg)
+        display: inline
+        font-size: 14px
+
+  .labels-sections
+    display: inline-flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    &__item
+      margin: 5px
+      padding: 5px
+      border-bottom: 2px dotted var(--app-color-primary)
+      color: var(--app-color-primary)
+      text-transform: uppercase
+      font-weight: 700
+      @media (max-width: $app-screen-lg)
+        font-size: 14px
+
+  .links-sources
+    color: var(--app-color-primary)
+    &__item
+      font-size: 16px
+      margin-bottom: 10px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    &__number
+      padding-right: 5px
+      font-weight: bold
+    &__link
+      text-decoration: underline
+
+.labels-sections
+  display: inline-flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  &__item
+    margin: 5px
+    padding: 5px
+    border-bottom: 2px dotted var(--app-color-primary)
+    color: var(--app-color-primary)
+    text-transform: uppercase
+    font-weight: 700
+    @media (max-width: $app-screen-lg)
+      font-size: 14px

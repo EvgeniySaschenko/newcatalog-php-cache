@@ -1,0 +1,33 @@
+.app-language-swich
+  text-transform: uppercase
+  color: var(--app-color-primary-inverted)
+  text-align: center
+  font-size: 12px
+  font-weight: 700
+  &__current
+    cursor: pointer
+    padding: 5px
+    border: 1px solid var(--app-color-primary-inverted)
+  &__box
+    position: relative
+  &__list
+    position: absolute
+    top: 5px
+    left: 50%
+    transform: translateX(-50%)
+    border: 1px solid var(--app-color-primary-inverted)
+    border-radius: 2px
+    background-color: var(--app-color-primary-inverted)
+    text-align: center
+    z-index: 100
+  &__item
+    padding: 6px
+    cursor: pointer
+    color: var(--app-color-primary)
+    border: 1px solid var(--app-color-primary)
+    border-bottom: 0
+    &:last-child
+      border-bottom: 1px solid var(--app-color-primary)
+    &.active
+      background-color: var(--app-color-primary)
+      color: var(--app-color-primary-inverted)
