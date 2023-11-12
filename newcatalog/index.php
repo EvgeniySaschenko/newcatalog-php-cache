@@ -1,4 +1,3 @@
-
 <?
   $_settings = json_decode(file_get_contents('data/settings.json'), true);
   $_sections = json_decode(file_get_contents('data/sections.json'), true);
@@ -8,6 +7,16 @@
   $_data = '';
   $_langDefault = '';
   $_sectionId = $_urlParts[1] === 'section' ? (int)$_urlParts[2] : 0;
+  
+  // Redirect if there is a slash at the end
+  function redirectIfSlash() {
+    if(substr($_SERVER['SCRIPT_URL'], -1) === "/") {
+      $url = substr($_SERVER['SCRIPT_URL'],0,-1);
+      header("Location: {$url}");
+    }
+  }
+  
+  redirectIfSlash();
 
   // lang default
   function getLangDefault($settings) {
