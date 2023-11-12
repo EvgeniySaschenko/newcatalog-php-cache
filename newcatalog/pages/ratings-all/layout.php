@@ -50,7 +50,7 @@
     <div class="app-pagination">
       <div class="app-pagination__list">
         <? for($i = 1; $i <= $_data['pagesCount']; $i++): ?>
-          <a href="/<?= $_langDefault; ?>/?page=<?= $i; ?>" 
+          <a href="/<?= $_langDefault; ?>?page=<?= $i; ?>" 
             class="app-pagination__item <?= $i === (int)$_GET['page'] || (!(int)$_GET['page'] && $i === 1) ? 'active' : '' ?>" 
             data-analyzed-element="pagination-item"><?= $i; ?></a>
         <? endfor; ?>
